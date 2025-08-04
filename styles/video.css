@@ -1,5 +1,5 @@
 
-.video-grid {
+/* .video-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 16px;
@@ -28,6 +28,49 @@
 @media (min-width: 1000px){
     .video-grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .video-title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .video-author,
+    .video-stats {
+        font-size: 14px;
+    }
+} */
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 16px; /* row-gap column-gap */
+    justify-content: space-between;
+}
+
+/* Default: 100% width for small screens */
+.video-grid > * {
+    flex: 1 1 100%;
+}
+
+/* 2 columns */
+@media (min-width: 551px) and (max-width: 750px) {
+    .video-grid > * {
+        flex: 1 1 calc(50% - 8px); /* Adjust for gap */
+    }
+}
+
+/* 3 columns */
+@media (min-width: 751px) and (max-width: 999px) {
+    .video-grid > * {
+        flex: 1 1 calc(33.33% - 10.66px);
+    }
+}
+
+/* 4 columns */
+@media (min-width: 1000px) {
+    .video-grid > * {
+        flex: 1 1 calc(25% - 12px);
     }
 
     .video-title {
@@ -91,4 +134,5 @@
 .video-title-link {
     text-decoration: none;
     color: black;
+
 }
