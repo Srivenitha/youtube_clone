@@ -1,87 +1,42 @@
-
-/* .video-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 16px;
-    row-gap: 40px;
-}
-
-
-@media (max-width: 550px){
-    .video-grid {
-        grid-template-columns: 1fr ;
-    }
-}
-
-@media (min-width: 551px) and (max-width: 750px){
-    .video-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (min-width: 751px) and (max-width: 999px){
-    .video-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media (min-width: 1000px){
-    .video-grid {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    .video-title {
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    .video-author,
-    .video-stats {
-        font-size: 14px;
-    }
-} */
-
 .video-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px 16px; /* row-gap column-gap */
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 16px;
+  justify-content: space-between;
+  padding: 16px;
 }
 
-/* Default: 100% width for small screens */
 .video-grid > * {
-    flex: 1 1 100%;
+  flex: 1 1 100%;
 }
 
-/* 2 columns */
 @media (min-width: 551px) and (max-width: 750px) {
-    .video-grid > * {
-        flex: 1 1 calc(50% - 8px); /* Adjust for gap */
-    }
+  .video-grid > * {
+    flex: 1 1 calc(50% - 8px);
+  }
 }
 
-/* 3 columns */
 @media (min-width: 751px) and (max-width: 999px) {
-    .video-grid > * {
-        flex: 1 1 calc(33.33% - 10.66px);
-    }
+  .video-grid > * {
+    flex: 1 1 calc(33.33% - 10.66px);
+  }
 }
 
-/* 4 columns */
+
 @media (min-width: 1000px) {
-    .video-grid > * {
-        flex: 1 1 calc(25% - 12px);
-    }
+  .video-grid > * {
+    flex: 1 1 calc(25% - 12px);
+  }
 
-    .video-title {
-        font-size: 16px;
-        line-height: 24px;
-    }
+  .video-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
 
-    .video-author,
-    .video-stats {
-        font-size: 14px;
-    }
+  .video-author,
+  .video-stats {
+    font-size: 14px;
+  }
 }
 
 .thumbnail-row {
@@ -136,3 +91,4 @@
     color: black;
 
 }
+
